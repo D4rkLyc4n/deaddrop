@@ -1,0 +1,13 @@
+swagger: '2.0'
+info:
+  title: "XSS Test"
+  version: "1.0"
+  # The payload below uses ">< to break out of the tag and trigger the alert
+  description: |
+    <math><mtext><option><FAKE><option></option><mglyph><svg><mtext><textarea><a title="</textarea><img src='#' onerror='alert(window.origin)'>">
+paths:
+  /test:
+    get:
+      responses:
+        '200':
+          description: "OK"
