@@ -2,7 +2,7 @@ openapi: "3.0.0"
 info:
   title: "XSS-Test"
   version: "1.0.0"
-  description: "<img src=x onerror=alert('XSS_from_YAML')>"
+  description: "'<img src=x onerror=alert('XSS_from_YAML')>"
 paths:
   /test:
     get:
